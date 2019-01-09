@@ -259,11 +259,83 @@ body#about .nav-list li.about {
   box-sizing: border-box;
 }
 
+
 .gallery-container img {
   width: 100%;
   margin-bottom: 4px;
 }
+.description_layer {
+  position: absolute;
 
+  bottom: 8px;
+  left: 50%;
+  height: auto;
+  visibility: hidden;
+  display: flex;
+  transform: translate(-50%, -50%);
+
+
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+
+
+.location {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  visibility: hidden;
+  display: flex;
+  transition: opacity .2s, visibility .2s;
+  color:black
+
+}
+.gallery-container .wrap {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  opacity: 1;
+  transition: .5s ease;
+}
+
+
+
+.wrap:hover img {
+
+  transition: .2s;
+  opacity: .75;
+}
+
+.wrap:hover >.description_layer {
+  visibility: visible;
+  opacity: 1;
+  transition: .2s;
+}
+
+.wrap:hover >.location {
+  visibility: visible;
+  opacity: 1;
+  transition: .2s;
+}
+
+.description {
+  transition: .2s;
+  transform: translateY(1em);
+  color:black
+}
+
+
+
+.wrap:hover .description {
+  transform: translateY(0);
+}
+
+/* img:hover{
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+
+} */
 /*ABOUT*/
 
 .about-container {
