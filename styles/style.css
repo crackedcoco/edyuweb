@@ -113,6 +113,21 @@ body {
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
 }
+.base-left2 {
+  order:1;
+  flex-basis: 25%;
+  margin: 0 4px 0px;
+  padding: 48px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+
+.base-right2 {
+  order: 2;
+  flex-basis: 75%;
+  padding: 0px;
+}
 
 .nav-container {
   position: fixed;
@@ -152,6 +167,7 @@ body#adventure .nav-list li.adventure,
 body#events .nav-list li.events,
 body#faces .nav-list li.faces,
 body#lifestyle .nav-list li.lifestyle,
+body#offerings .nav-list li.offerings,
 body#about .nav-list li.about {
   color: rgba(0,0,0,1);
 }
@@ -258,9 +274,24 @@ body#about .nav-list li.about {
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
 }
+.gallery-all {
+  order 2;
+  flex-basis: 100%;
+  padding-left: 2px;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+
 
 
 .gallery-container img {
+  width: 100%;
+  margin-bottom: 4px;
+}
+.gallery-container video {
   width: 100%;
   margin-bottom: 4px;
 }
@@ -307,6 +338,12 @@ body#about .nav-list li.about {
   opacity: .75;
 }
 
+.wrap:hover video {
+
+  transition: .2s;
+  opacity: .75;
+}
+
 .wrap:hover >.description_layer {
   visibility: visible;
   opacity: 1;
@@ -339,9 +376,11 @@ body#about .nav-list li.about {
 /*ABOUT*/
 
 .about-container {
-  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
   color: #000;
-  padding: 70px 200px 200px;
+  padding: 20px 20px 20px 20px;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
@@ -351,6 +390,12 @@ body#about .nav-list li.about {
   font-size: 1em;
   line-height: 1.5em;
   margin-bottom: 1em;
+  opacity: .75;
+}
+.about-container li {
+  font-size: 1em;
+  /* line-height: 1.5em; */
+  /* margin-bottom: 1em; */
   opacity: .75;
 }
 
